@@ -1,23 +1,37 @@
-import Link from "next/link";
-import { site } from "@/config/site";
+"use client";
+import { useEffect, useState } from "react";
+const sections = ["about", "experience", "work"] as const;
 export function Navigation() {
+  const [active, setActive] = useState<string>("about");
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries)
+          if (entry.isIntersecting) setActive(entry.target.id);
+      },
+      { rootMargin: "-10% 0px -55% 0px", threshold: 0 },
+    );
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
   return (
-    <header className="site-header shell">
-      <Link href="/#top" className="wordmark" aria-label="Steve Grady home">
-        {site.name}
-      </Link>
-      <nav aria-label="Main navigation">
-        {[
-          ["About", "about"],
-          ["Work", "work"],
-          ["Approach", "approach"],
-          ["Contact", "contact"],
-        ].map(([name, id]) => (
-          <a key={id} href={`/#${id}`}>
-            {name}
-          </a>
+    <nav aria-label="Sections" className="section-nav">
+      <ul>
+        {sections.map((id) => (
+          <li key={id}>
+            <a
+              href={`#${id}`}
+              aria-current={active === id ? "location" : undefined}
+            >
+              <span className="nav-line" />
+              <span>{id}</span>
+            </a>
+          </li>
         ))}
-      </nav>
-    </header>
+      </ul>
+    </nav>
   );
 }

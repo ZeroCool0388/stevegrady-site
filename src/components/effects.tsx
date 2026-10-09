@@ -1,105 +1,107 @@
 "use client";
 import { useEffect } from "react";
-import { animate } from "motion";
-
+import { animate } from "motion/mini";
 export function Effects() {
   useEffect(() => {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const fine = window.matchMedia("(hover: hover) and (pointer: fine)");
-    let cleanup = () => {};
-    const setup = () => {
-      cleanup();
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+    const desktop = matchMedia("(min-width: 1024px) and (pointer: fine)");
+    let cleanups: (() => void)[] = [];
+    let disposed = false;
+    let generation = 0;
+    const revealed = new WeakSet<Element>();
+    function setup() {
+      const current = ++generation;
+      cleanups.forEach((fn) => fn());
+      cleanups = [];
+      document
+        .getElementById("identity")
+        ?.classList.toggle("compact", window.scrollY > 40);
+      const scroll = () =>
+        document
+          .getElementById("identity")
+          ?.classList.toggle("compact", window.scrollY > 40);
+      window.addEventListener("scroll", scroll, { passive: true });
+      cleanups.push(() => window.removeEventListener("scroll", scroll));
       if (reduced.matches) return;
-      let disposed = false;
-      let destroyScroll = () => {};
-      void import("lenis").then(({ default: Lenis }) => {
-        if (disposed) return;
+      import("lenis").then(({ default: Lenis }) => {
+        if (disposed || reduced.matches || generation !== current) return;
         const lenis = new Lenis({
           autoRaf: true,
-          anchors: { offset: 0 },
-          duration: 0.95,
+          anchors: true,
+          duration: 0.8,
         });
-        destroyScroll = () => lenis.destroy();
+        cleanups.push(() => lenis.destroy());
       });
-      const revealElements = [
-        ...document.querySelectorAll<HTMLElement>("[data-reveal]"),
-      ];
       const observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement;
-              const bounds = element.getBoundingClientRect();
-              if (bounds.top > 100) {
-                animate(
-                  element,
-                  { transform: ["translateY(24px)", "translateY(0px)"] },
-                  { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
-                );
-              }
-              observer.unobserve(element);
+          for (const entry of entries)
+            if (entry.isIntersecting && !revealed.has(entry.target)) {
+              revealed.add(entry.target);
+              const animation = animate(
+                entry.target as HTMLElement,
+                {
+                  opacity: [0, 1],
+                  transform: ["translateY(12px)", "translateY(0)"],
+                },
+                { duration: 0.38, ease: "easeOut" },
+              );
+              cleanups.push(() => animation.stop());
+              observer.unobserve(entry.target);
             }
-          });
         },
-        { threshold: 0.12 },
+        { threshold: 0.08 },
       );
-      revealElements.forEach((e) => observer.observe(e));
-      const lines = [
-        ...document.querySelectorAll<HTMLElement>(".hero-line > span"),
-      ];
-      lines.forEach((line, i) =>
-        animate(
-          line,
-          { transform: ["translateY(12px)", "translateY(0px)"] },
-          { duration: 0.7, delay: i * 0.065, ease: [0.22, 1, 0.36, 1] },
-        ),
-      );
-      const spotlight = document.querySelector<HTMLElement>(".spotlight");
-      const move = (e: PointerEvent) => {
-        if (!fine.matches || !spotlight) return;
-        spotlight.style.setProperty("--pointer-x", `${e.clientX}px`);
-        spotlight.style.setProperty("--pointer-y", `${e.clientY}px`);
-      };
-      document.addEventListener("pointermove", move, { passive: true });
-      const magnets = [
-        ...document.querySelectorAll<HTMLElement>("[data-magnetic]"),
-      ];
-      const handlers = magnets.map((el) => {
-        const enter = (e: PointerEvent) => {
-          if (!fine.matches) return;
-          const b = el.getBoundingClientRect();
-          el.style.translate = `${(e.clientX - b.left - b.width / 2) * 0.12}px ${(e.clientY - b.top - b.height / 2) * 0.18}px`;
-        };
-        const leave = () => {
-          el.style.translate = "0px 0px";
-        };
-        el.addEventListener("pointermove", enter);
-        el.addEventListener("pointerleave", leave);
-        return () => {
-          el.removeEventListener("pointermove", enter);
-          el.removeEventListener("pointerleave", leave);
-          leave();
-        };
+      document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((el) => {
+        if (!revealed.has(el)) observer.observe(el);
       });
-      cleanup = () => {
-        disposed = true;
-        destroyScroll();
-        observer.disconnect();
-        document.removeEventListener("pointermove", move);
-        handlers.forEach((fn) => fn());
-        document
-          .querySelectorAll<HTMLElement>("[data-reveal], .hero-line > span")
-          .forEach((el) => (el.style.transform = "none"));
+      cleanups.push(() => observer.disconnect());
+      if (!desktop.matches) return;
+      const spot = document.getElementById("spotlight");
+      const pointer = (event: PointerEvent) => {
+        if (event.pointerType !== "mouse") return;
+        spot?.style.setProperty("--x", `${event.clientX}px`);
+        spot?.style.setProperty("--y", `${event.clientY}px`);
       };
-    };
+      window.addEventListener("pointermove", pointer, { passive: true });
+      cleanups.push(() => window.removeEventListener("pointermove", pointer));
+      document
+        .querySelectorAll<HTMLElement>("[data-magnetic]")
+        .forEach((el) => {
+          const move = (event: PointerEvent) => {
+            const rect = el.getBoundingClientRect();
+            animate(
+              el,
+              {
+                transform: `translate(${(event.clientX - rect.left - rect.width / 2) * 0.15}px, ${(event.clientY - rect.top - rect.height / 2) * 0.15}px)`,
+              },
+              { duration: 0.2 },
+            );
+          };
+          const reset = () => {
+            animate(
+              el,
+              { transform: "translate(0px, 0px)" },
+              { duration: 0.2 },
+            );
+          };
+          el.addEventListener("pointermove", move);
+          el.addEventListener("pointerleave", reset);
+          cleanups.push(() => {
+            el.removeEventListener("pointermove", move);
+            el.removeEventListener("pointerleave", reset);
+            el.style.transform = "";
+          });
+        });
+    }
     setup();
     reduced.addEventListener("change", setup);
-    fine.addEventListener("change", setup);
+    desktop.addEventListener("change", setup);
     return () => {
-      cleanup();
+      disposed = true;
+      cleanups.forEach((fn) => fn());
       reduced.removeEventListener("change", setup);
-      fine.removeEventListener("change", setup);
+      desktop.removeEventListener("change", setup);
     };
   }, []);
-  return <div className="spotlight" aria-hidden="true" />;
+  return <div id="spotlight" className="spotlight" aria-hidden="true" />;
 }

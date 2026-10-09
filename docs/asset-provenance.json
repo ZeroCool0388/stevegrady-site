@@ -1,0 +1,33 @@
+{
+  "captures": [
+    {
+      "file": "public/work/vendor-risk-triage.webp",
+      "url": "https://vendor-risk-triage-zerocool0388.vercel.app",
+      "width": 1280,
+      "height": 800,
+      "capturedAt": "2026-10-09T21:17:59.302Z"
+    },
+    {
+      "file": "public/work/renewal-radar.webp",
+      "url": "https://renewal-radar-azure.vercel.app",
+      "width": 1280,
+      "height": 800,
+      "capturedAt": "2026-10-09T21:18:01.425Z"
+    },
+    {
+      "file": "public/work/scopeforge.webp",
+      "url": "https://scopeforge-sable.vercel.app",
+      "width": 1280,
+      "height": 800,
+      "capturedAt": "2026-10-09T21:18:03.344Z"
+    }
+  ],
+  "diagram": {
+    "file": "public/work/personal-ai-system.png",
+    "source": "https://raw.githubusercontent.com/ZeroCool0388/personal-ai-system/main/diagram-v2.png",
+    "width": 3200,
+    "height": 2840,
+    "sha256": "231624d6aeefce6700f08f25204537d830b486605096eb0f860743c16139c390",
+    "unchanged": true
+  }
+}

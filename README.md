@@ -1,31 +1,22 @@
 # Steve Grady
 
-A personal portfolio for Steve Grady, Senior Technical Solutions Consultant: AI-native solution design, integrations and pre-sales.
+A calm personal CV site for a senior technical solutions consultant, with experience and four independent projects.
 
-Built with Next.js App Router, strict TypeScript, Tailwind CSS, Motion and Lenis. The page is statically rendered; no backend, credentials, database, tracking or cookies are required.
+[Live site](https://stevegrady-site.vercel.app) · [Repository](https://github.com/ZeroCool0388/stevegrady-site)
 
-Live: [stevegrady-site.vercel.app](https://stevegrady-site.vercel.app)
+Next.js 16 App Router, strict TypeScript, Tailwind CSS v4, Inter and Instrument Serif via next/font, Motion and Lenis. Fully static export with no backend or environment values.
 
-## Run locally
+## Local development
 
-```sh
-npm ci
-npm run dev
-```
+`npm install`, then `npm run dev`. Run `npm run lint`, `npm run typecheck` and `npm run build`. `npm start` serves the exported build. `npm run qa` checks the local build; set QA_URL for a deployed site. `node scripts/lighthouse.mjs` runs both device profiles.
 
-```sh
-npm run lint
-npm run typecheck
-npm run build
-npm start
-```
+## Steve's placeholders
 
-## Content
+- Replace `public/cv/steve-grady-cv.pdf`, currently a one-page “CV coming soon” placeholder.
+- Decide whether to display the supplied deal statistic. `SHOW_DEAL_STAT` in `src/config/site.ts` defaults to false.
 
-Edit `src/config/site.ts` for the site URL, contact links, project details and hidden deal statistic. Replace the email placeholder to show an email action. Replace `public/cv/steve-grady-cv.pdf` with the final CV, then remove the coming-soon caption in `src/app/page.tsx`. Keep the deal statistic disabled until approved.
+## Assets and verification
 
-Fonts are original, unmodified WOFF2 files from Fontshare; licences are in `public/fonts/`. Project previews are captures of the public demos, not simulated interfaces.
+Demo thumbnails are real Playwright captures at 1280 × 800. The architecture thumbnail is the unchanged original public repository diagram; see `docs/asset-provenance.json`. Earlier supplied font licences are retained, although those fonts are no longer used.
 
-Accessibility includes keyboard focus, skip link, semantic headings, touch fallbacks and reduced motion. All content remains readable with JavaScript disabled.
-
-Build plan: `docs/build-plan.md`. Verification and final screenshots: `docs/verification.md` and `docs/screenshots/`.
+The supplied local briefs are excluded from publication. Design concepts, browser screenshots and verification results are in `docs`. Public sharing graphics use the site's actual Inter font.

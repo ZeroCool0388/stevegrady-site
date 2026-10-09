@@ -1,0 +1,83 @@
+{
+  "scope": "All publishable files, including documentation and licences. Local input briefs and ignored build/cache folders are not published. Git history and installed packages excluded.",
+  "prohibitedContentMatches": 0,
+  "bannedPhraseMatches": 0,
+  "literalSubstringMatches": [
+    {
+      "file": "docs/asset-provenance.json",
+      "line": 4,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "docs/asset-provenance.json",
+      "line": 5,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "docs/lighthouse-desktop.json",
+      "line": 109,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "docs/lighthouse-desktop.json",
+      "line": 221,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "docs/lighthouse-desktop.json",
+      "line": 224,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "docs/lighthouse-mobile.json",
+      "line": 115,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "docs/lighthouse-mobile.json",
+      "line": 227,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "docs/lighthouse-mobile.json",
+      "line": 230,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "package-lock.json",
+      "line": 3843,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "package-lock.json",
+      "line": 4932,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "package-lock.json",
+      "line": 6907,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "scripts/capture-work.mjs",
+      "line": 8,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "src/config/site.ts",
+      "line": 81,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "src/config/site.ts",
+      "line": 84,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "src/config/site.ts",
+      "line": 85,
+      "classification": "approved URL or immutable integrity value"
+    }
+  ],
+  "notes": "Literal substring matches are limited to the explicitly required project URLs and package integrity values and the standard registry package URL. They are not prohibited content or credentials. Original diagram and shipped images visually checked."
+}
