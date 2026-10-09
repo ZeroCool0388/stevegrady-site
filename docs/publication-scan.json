@@ -55,17 +55,17 @@
     },
     {
       "file": "src/config/site.ts",
+      "line": 78,
+      "classification": "approved URL or immutable integrity value"
+    },
+    {
+      "file": "src/config/site.ts",
       "line": 81,
       "classification": "approved URL or immutable integrity value"
     },
     {
       "file": "src/config/site.ts",
-      "line": 84,
-      "classification": "approved URL or immutable integrity value"
-    },
-    {
-      "file": "src/config/site.ts",
-      "line": 85,
+      "line": 82,
       "classification": "approved URL or immutable integrity value"
     }
   ],

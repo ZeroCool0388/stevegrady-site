@@ -11,9 +11,6 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/steve-jg",
   cv: "/cv/steve-grady-cv.pdf",
 };
-export const SHOW_DEAL_STAT = false;
-export const dealStat =
-  "Directly involved in around half of EMEA closed-won new business in 2025 and 2026.";
 export const about = [
   "I work across the full solution lifecycle, from discovery and technical pre-sales through to architecture, implementation and adoption. Over seven years I have led complex SaaS deployments in vendor and contract lifecycle management, third-party risk and transport management, for organisations in logistics, bioscience, pharmaceuticals, finance and fintech.",
   "My current focus is AI-native solution design: building AI into workflows where it measurably reduces manual effort and shortens time to value, and being clear about where it does not belong.",

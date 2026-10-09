@@ -27,7 +27,7 @@ All six screenshots and `qa-results.json` were refreshed against the production 
 
 - ESLint, strict TypeScript and Next production static export pass.
 - Independent comparison with section 4 of the supplied brief verifies the exact About paragraphs and every supplied role/project string.
-- Browser checks cover 1440, 1024, 768, 390 and 360px: no horizontal overflow, correct copy, four roles, four projects, no email link, hidden optional statistic, accessible landmarks and focus indicators.
+- Browser checks cover 1440, 1024, 768, 390 and 360px: no horizontal overflow, correct copy, four roles, four projects, no email link, no deal statistic, accessible landmarks and focus indicators.
 - Desktop IntersectionObserver navigation selects the visible section. Experience hover highlights the whole card and dims its neighbours. Cards are not misleading links.
 - On mobile the name/title header becomes compact and stays at the top; section labels stick underneath. Desktop and touch fallbacks follow the requested breakpoints.
 - Reduced motion disables Lenis, reveals, tracking and magnetic effects. The desktop spotlight remains visible and static. Content also remains visible without JavaScript.
@@ -68,4 +68,4 @@ Local user-supplied briefs contain the prohibited words as instructions. They ar
 
 ## Steve's remaining choices
 
-Replace the one-page CV placeholder. Decide whether to enable `SHOW_DEAL_STAT`; it currently remains false.
+Replace the one-page CV placeholder when Steve supplies his final PDF. Deal statistics are reserved for the CV only; the website's statistic and display option have been removed.

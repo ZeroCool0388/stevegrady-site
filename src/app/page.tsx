@@ -1,12 +1,5 @@
 import Image from "next/image";
-import {
-  about,
-  dealStat,
-  experience,
-  projects,
-  SHOW_DEAL_STAT,
-  site,
-} from "@/config/site";
+import { about, experience, projects, site } from "@/config/site";
 import { Profile } from "@/components/profile";
 import { Effects } from "@/components/effects";
 import { Pills } from "@/components/pills";
@@ -36,7 +29,7 @@ export default function Home() {
               Experience
             </h2>
             <div className="card-group experience-list">
-              {experience.map((role, index) => (
+              {experience.map((role) => (
                 <article
                   className="card experience-card"
                   key={role.date}
@@ -48,9 +41,6 @@ export default function Home() {
                     <p className="descriptor">{role.descriptor}</p>
                     {role.description && (
                       <p className="card-description">{role.description}</p>
-                    )}
-                    {index === 0 && SHOW_DEAL_STAT && (
-                      <p className="card-description">{dealStat}</p>
                     )}
                     <Pills items={role.skills} />
                   </div>

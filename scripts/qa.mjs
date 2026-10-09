@@ -7,7 +7,6 @@ import {
   about,
   experience,
   projects,
-  dealStat,
 } from "../src/config/site.ts";
 const url = process.env.QA_URL || "http://localhost:3000";
 const browser = await chromium.launch();
@@ -41,7 +40,7 @@ for (const width of [1440, 390, 360, 768, 1024]) {
   assert.equal(await page.locator(".experience-card").count(), 4);
   assert.equal(await page.locator(".work-card").count(), 4);
   assert.equal(
-    (await page.locator("body").innerText()).includes(dealStat),
+    (await page.locator("body").innerText()).includes("closed-won"),
     false,
   );
   assert.equal(await page.locator('a[href^="mailto:"]').count(), 0);

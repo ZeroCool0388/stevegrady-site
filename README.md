@@ -13,7 +13,8 @@ Next.js 16 App Router, strict TypeScript, Tailwind CSS v4, Inter and Instrument 
 ## Steve's placeholders
 
 - Replace `public/cv/steve-grady-cv.pdf`, currently a one-page “CV coming soon” placeholder.
-- Decide whether to display the supplied deal statistic. `SHOW_DEAL_STAT` in `src/config/site.ts` defaults to false.
+
+Deal statistics are reserved for the CV only; the website has no option to display them.
 
 ## Assets and verification
 

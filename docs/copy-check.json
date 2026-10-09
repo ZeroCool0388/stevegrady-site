@@ -2,5 +2,5 @@
   "source": "local v2 brief, section 4",
   "aboutParagraphsExact": true,
   "allRoleAndProjectCopyPresentVerbatim": true,
-  "dealStatisticHiddenByDefault": true
+  "dealStatisticsReservedForCVOnly": true
 }

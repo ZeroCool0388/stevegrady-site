@@ -3,7 +3,7 @@
 Replace the first implementation with a static personal CV. Keep the existing repository, history, font licences, deployment project and URL. Build on `v2-rebuild` and use Steve's supplied author and committer identity.
 
 1. Establish a centred navy two-column desktop layout: sticky profile and navigation, scrolling content. Use Inter throughout with one Instrument Serif italic line.
-2. Insert the supplied copy exactly, with the optional deal statistic disabled. Create four experience cards and four project cards, with independent repository links.
+2. Insert the supplied copy exactly. Following Steve's decision, reserve deal statistics for the CV only. Create four experience cards and four project cards, with independent repository links.
 3. Capture the three real demos at 1280 × 800. Download the original architecture diagram. Produce metadata, monogram icons, a sharing image and a one-page CV placeholder.
 4. Add IntersectionObserver navigation, restrained Motion reveals, Lenis scrolling, fine-pointer social effects and a desktop spotlight. Honour touch and reduced-motion settings.
 5. Validate responsive layouts, keyboard use, copy, links, accessibility, static routes, lint, types and build. Review rendered screenshots against the concepts and brief.
