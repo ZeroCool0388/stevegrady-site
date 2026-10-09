@@ -1,0 +1,39 @@
+{
+  "url": "http://localhost:3000",
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "axeViolations": 0,
+      "anchors": true,
+      "reducedMotion": true,
+      "skipLink": true,
+      "cv": true,
+      "notFound": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "axeViolations": 0,
+      "anchors": true,
+      "reducedMotion": true,
+      "skipLink": true,
+      "cv": true,
+      "notFound": true,
+      "errors": []
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "axeViolations": 0,
+      "anchors": true,
+      "reducedMotion": true,
+      "skipLink": true,
+      "cv": true,
+      "notFound": true,
+      "errors": []
+    }
+  ],
+  "noJavaScript": true
+}

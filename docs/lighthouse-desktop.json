@@ -1,0 +1,326 @@
+{
+  "url": "http://localhost:3000",
+  "fetchTime": "2026-10-09T20:46:33.384Z",
+  "lighthouseVersion": "13.5.0",
+  "scores": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "issues": [
+    {
+      "id": "label-content-name-mismatch",
+      "title": "Elements with visible text labels do not have matching accessible names.",
+      "score": 0,
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": [
+          {
+            "node": {
+              "type": "node",
+              "lhId": "1-0-A",
+              "path": "1,HTML,1,BODY,4,MAIN,2,SECTION,2,DIV,3,ARTICLE,0,A",
+              "selector": "section#work > div.project-grid > article.project > a.project-media",
+              "boundingRect": {
+                "top": 2783,
+                "bottom": 3181,
+                "left": 740,
+                "right": 1376,
+                "width": 636,
+                "height": 397
+              },
+              "snippet": "<a class=\"project-media\" href=\"https://github.com/ZeroCool0388/personal-ai-system\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Read write-up: Personal AI System\">",
+              "nodeLabel": "OpenClaw\nPersonal\nAI System.\nModel routing. Bounded help. Reviewable stages.",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "impact": "serious",
+          "tags": [
+            "cat.semantics",
+            "wcag21a",
+            "wcag253",
+            "EN-301-549",
+            "EN-9.2.5.3",
+            "RGAAv4",
+            "RGAA-6.1.5",
+            "experimental"
+          ]
+        }
+      }
+    },
+    {
+      "id": "unused-javascript",
+      "title": "Reduce unused JavaScript",
+      "score": 0,
+      "displayValue": "Est savings of 29 KiB",
+      "details": {
+        "type": "opportunity",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "subItemsHeading": {
+              "key": "source",
+              "valueType": "code"
+            },
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "subItemsHeading": {
+              "key": "sourceBytes"
+            },
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedBytes",
+            "valueType": "bytes",
+            "subItemsHeading": {
+              "key": "sourceWastedBytes"
+            },
+            "label": "Est Savings"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+            "totalBytes": 71966,
+            "wastedBytes": 30057,
+            "wastedPercent": 41.76491853116548
+          }
+        ],
+        "overallSavingsMs": 40,
+        "overallSavingsBytes": 30057,
+        "sortedBy": [
+          "wastedBytes"
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "metricSavings": {
+            "FCP": 0,
+            "LCP": 40
+          }
+        }
+      }
+    },
+    {
+      "id": "legacy-javascript-insight",
+      "title": "Legacy JavaScript",
+      "score": 0.5,
+      "displayValue": "Est savings of 14 KiB",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "subItemsHeading": {
+              "key": "location",
+              "valueType": "source-location"
+            },
+            "label": "URL"
+          },
+          {
+            "key": null,
+            "valueType": "code",
+            "subItemsHeading": {
+              "key": "signal"
+            },
+            "label": ""
+          },
+          {
+            "key": "wastedBytes",
+            "valueType": "bytes",
+            "label": "Wasted bytes"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+            "wastedBytes": 13920,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 229205
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flat",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 228593
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 228706
+                  }
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 229082
+                  }
+                },
+                {
+                  "signal": "Object.hasOwn",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 229340
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimEnd",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 228335
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 228250
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "wastedBytes": 13920
+        }
+      }
+    },
+    {
+      "id": "network-dependency-tree-insight",
+      "title": "Network dependency tree",
+      "score": 0,
+      "details": {
+        "type": "list",
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "53033E5F41125F4D946CD763C98823CD": {
+                  "url": "http://localhost:3000/",
+                  "navStartToEndTime": 9,
+                  "transferSize": 7260,
+                  "isLongest": true,
+                  "children": {
+                    "72110.7": {
+                      "url": "http://localhost:3000/_next/static/chunks/16erumox07_1g.css",
+                      "navStartToEndTime": 16,
+                      "transferSize": 5078,
+                      "isLongest": true,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 16
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "render-blocking-insight",
+      "title": "Render-blocking requests",
+      "score": 0.5,
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedMs",
+            "valueType": "timespanMs",
+            "label": "Duration"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/16erumox07_1g.css",
+            "totalBytes": 5078
+          }
+        ]
+      }
+    }
+  ]
+}

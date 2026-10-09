@@ -1,0 +1,469 @@
+{
+  "url": "http://localhost:3000",
+  "fetchTime": "2026-10-09T20:46:26.983Z",
+  "lighthouseVersion": "13.5.0",
+  "scores": {
+    "performance": 93,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "issues": [
+    {
+      "id": "largest-contentful-paint",
+      "title": "Largest Contentful Paint",
+      "score": 0.71,
+      "displayValue": "3.2 s"
+    },
+    {
+      "id": "label-content-name-mismatch",
+      "title": "Elements with visible text labels do not have matching accessible names.",
+      "score": 0,
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": [
+          {
+            "node": {
+              "type": "node",
+              "lhId": "1-0-A",
+              "path": "1,HTML,1,BODY,4,MAIN,2,SECTION,2,DIV,3,ARTICLE,0,A",
+              "selector": "section#work > div.project-grid > article.project > a.project-media",
+              "boundingRect": {
+                "top": 2836,
+                "bottom": 3064,
+                "left": 24,
+                "right": 388,
+                "width": 364,
+                "height": 228
+              },
+              "snippet": "<a class=\"project-media\" href=\"https://github.com/ZeroCool0388/personal-ai-system\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Read write-up: Personal AI System\">",
+              "nodeLabel": "OpenClaw\nPersonal\nAI System.\nModel routing. Bounded help. Reviewable stages.",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "impact": "serious",
+          "tags": [
+            "cat.semantics",
+            "wcag21a",
+            "wcag253",
+            "EN-301-549",
+            "EN-9.2.5.3",
+            "RGAAv4",
+            "RGAA-6.1.5",
+            "experimental"
+          ]
+        }
+      }
+    },
+    {
+      "id": "unused-javascript",
+      "title": "Reduce unused JavaScript",
+      "score": 0,
+      "displayValue": "Est savings of 29 KiB",
+      "details": {
+        "type": "opportunity",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "subItemsHeading": {
+              "key": "source",
+              "valueType": "code"
+            },
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "subItemsHeading": {
+              "key": "sourceBytes"
+            },
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedBytes",
+            "valueType": "bytes",
+            "subItemsHeading": {
+              "key": "sourceWastedBytes"
+            },
+            "label": "Est Savings"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+            "totalBytes": 71966,
+            "wastedBytes": 30057,
+            "wastedPercent": 41.76491853116548
+          }
+        ],
+        "overallSavingsMs": 300,
+        "overallSavingsBytes": 30057,
+        "sortedBy": [
+          "wastedBytes"
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "metricSavings": {
+            "FCP": 0,
+            "LCP": 300
+          }
+        }
+      }
+    },
+    {
+      "id": "image-delivery-insight",
+      "title": "Improve image delivery",
+      "score": 0.5,
+      "displayValue": "Est savings of 54 KiB",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "label": ""
+          },
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL",
+            "subItemsHeading": {
+              "key": "reason",
+              "valueType": "text"
+            }
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Resource Size"
+          },
+          {
+            "key": "wastedBytes",
+            "valueType": "bytes",
+            "label": "Est Savings",
+            "subItemsHeading": {
+              "key": "wastedBytes",
+              "valueType": "bytes"
+            }
+          }
+        ],
+        "items": [
+          {
+            "node": {
+              "type": "node",
+              "lhId": "page-1-IMG",
+              "path": "1,HTML,1,BODY,4,MAIN,2,SECTION,2,DIV,1,ARTICLE,0,A,0,IMG",
+              "selector": "div.project-grid > article.project > a.project-media > img",
+              "boundingRect": {
+                "top": 1984,
+                "bottom": 2210,
+                "left": 25,
+                "right": 387,
+                "width": 362,
+                "height": 226
+              },
+              "snippet": "<img alt=\"Renewal Radar live application screenshot\" loading=\"lazy\" width=\"1440\" height=\"900\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" sizes=\"(max-width: 760px) 100vw, 50vw\" srcset=\"/_next/image?url=%2Fwork%2Frenewal-radar.webp&amp;w=384&amp;q=85 384w, /_next/imag…\" src=\"http://localhost:3000/_next/image?url=%2Fwork%2Frenewal-radar.webp&amp;w=750&amp;q…\">",
+              "nodeLabel": "Renewal Radar live application screenshot"
+            },
+            "url": "http://localhost:3000/_next/image?url=%2Fwork%2Frenewal-radar.webp&w=750&q=85",
+            "totalBytes": 27378,
+            "wastedBytes": 21000,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (750x469) for its displayed dimensions (362x226). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 21000
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "lhId": "page-2-IMG",
+              "path": "1,HTML,1,BODY,4,MAIN,2,SECTION,2,DIV,0,ARTICLE,0,A,0,IMG",
+              "selector": "div.project-grid > article.project > a.project-media > img",
+              "boundingRect": {
+                "top": 1557,
+                "bottom": 1783,
+                "left": 25,
+                "right": 387,
+                "width": 362,
+                "height": 226
+              },
+              "snippet": "<img alt=\"VendorRisk Triage live application screenshot\" loading=\"lazy\" width=\"1440\" height=\"900\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" sizes=\"(max-width: 760px) 100vw, 50vw\" srcset=\"/_next/image?url=%2Fwork%2Fvendor-risk-triage.webp&amp;w=384&amp;q=85 384w, /_next…\" src=\"http://localhost:3000/_next/image?url=%2Fwork%2Fvendor-risk-triage.webp&amp;w=…\">",
+              "nodeLabel": "VendorRisk Triage live application screenshot"
+            },
+            "url": "http://localhost:3000/_next/image?url=%2Fwork%2Fvendor-risk-triage.webp&w=750&q=85",
+            "totalBytes": 24642,
+            "wastedBytes": 18876,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (750x467) for its displayed dimensions (362x226). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 18876
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "lhId": "page-3-IMG",
+              "path": "1,HTML,1,BODY,4,MAIN,2,SECTION,2,DIV,2,ARTICLE,0,A,0,IMG",
+              "selector": "div.project-grid > article.project > a.project-media > img",
+              "boundingRect": {
+                "top": 2411,
+                "bottom": 2636,
+                "left": 25,
+                "right": 387,
+                "width": 362,
+                "height": 226
+              },
+              "snippet": "<img alt=\"ScopeForge live application screenshot\" loading=\"lazy\" width=\"1440\" height=\"900\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" sizes=\"(max-width: 760px) 100vw, 50vw\" srcset=\"/_next/image?url=%2Fwork%2Fscopeforge.webp&amp;w=384&amp;q=85 384w, /_next/image?u…\" src=\"http://localhost:3000/_next/image?url=%2Fwork%2Fscopeforge.webp&amp;w=750&amp;q=85\">",
+              "nodeLabel": "ScopeForge live application screenshot"
+            },
+            "url": "http://localhost:3000/_next/image?url=%2Fwork%2Fscopeforge.webp&w=750&q=85",
+            "totalBytes": 19918,
+            "wastedBytes": 15257,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (750x467) for its displayed dimensions (362x226). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 15257
+                }
+              ]
+            }
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "wastedBytes": 55133
+        }
+      }
+    },
+    {
+      "id": "legacy-javascript-insight",
+      "title": "Legacy JavaScript",
+      "score": 0,
+      "displayValue": "Est savings of 14 KiB",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "subItemsHeading": {
+              "key": "location",
+              "valueType": "source-location"
+            },
+            "label": "URL"
+          },
+          {
+            "key": null,
+            "valueType": "code",
+            "subItemsHeading": {
+              "key": "signal"
+            },
+            "label": ""
+          },
+          {
+            "key": "wastedBytes",
+            "valueType": "bytes",
+            "label": "Wasted bytes"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+            "wastedBytes": 13920,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 229205
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flat",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 228593
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 228706
+                  }
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 229082
+                  }
+                },
+                {
+                  "signal": "Object.hasOwn",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 229340
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimEnd",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 228335
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 228250
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "wastedBytes": 13920
+        }
+      }
+    },
+    {
+      "id": "network-dependency-tree-insight",
+      "title": "Network dependency tree",
+      "score": 0,
+      "details": {
+        "type": "list",
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "515B70852A10FC4A548F82B2A97B1872": {
+                  "url": "http://localhost:3000/",
+                  "navStartToEndTime": 16,
+                  "transferSize": 7260,
+                  "isLongest": true,
+                  "children": {
+                    "72090.7": {
+                      "url": "http://localhost:3000/_next/static/chunks/16erumox07_1g.css",
+                      "navStartToEndTime": 26,
+                      "transferSize": 5078,
+                      "isLongest": true,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 26
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "render-blocking-insight",
+      "title": "Render-blocking requests",
+      "score": 0,
+      "displayValue": "Est savings of 140 ms",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedMs",
+            "valueType": "timespanMs",
+            "label": "Duration"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/16erumox07_1g.css",
+            "totalBytes": 5078,
+            "wastedMs": 156
+          }
+        ]
+      }
+    }
+  ]
+}

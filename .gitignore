@@ -1,0 +1,8 @@
+node_modules/
+.next/
+out/
+.vercel/
+.env*
+*.tsbuildinfo
+portfolio-site-codex-brief.md
+.DS_Store

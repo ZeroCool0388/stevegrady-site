@@ -1,0 +1,34 @@
+{
+  "name": "stevegrady-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "qa": "node scripts/qa.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "motion": "latest",
+    "lenis": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tailwindcss": "^4",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "latest",
+    "eslint-config-next": "16.4.0",
+    "playwright": "latest",
+    "sharp": "latest",
+    "lighthouse": "latest",
+    "@axe-core/playwright": "latest"
+  }
+}
