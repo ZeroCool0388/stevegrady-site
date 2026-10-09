@@ -1,0 +1,27 @@
+{
+  "url": "https://stevegrady-site.vercel.app",
+  "checkedAt": "2026-10-09T21:26:17.978Z",
+  "results": [
+    {
+      "project": "VendorRisk Triage",
+      "wholeCardThumbnailClick": true,
+      "separateRepositoryLink": true
+    },
+    {
+      "project": "Renewal Radar",
+      "wholeCardThumbnailClick": true,
+      "separateRepositoryLink": true
+    },
+    {
+      "project": "ScopeForge",
+      "wholeCardThumbnailClick": true,
+      "separateRepositoryLink": true
+    },
+    {
+      "project": "Personal AI System",
+      "wholeCardThumbnailClick": true,
+      "separateRepositoryLink": false
+    }
+  ],
+  "desktopTouchSpotlightOff": true
+}

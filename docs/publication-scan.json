@@ -15,32 +15,22 @@
     },
     {
       "file": "docs/lighthouse-desktop.json",
-      "line": 109,
+      "line": 191,
       "classification": "approved URL or immutable integrity value"
     },
     {
       "file": "docs/lighthouse-desktop.json",
-      "line": 221,
-      "classification": "approved URL or immutable integrity value"
-    },
-    {
-      "file": "docs/lighthouse-desktop.json",
-      "line": 224,
+      "line": 194,
       "classification": "approved URL or immutable integrity value"
     },
     {
       "file": "docs/lighthouse-mobile.json",
-      "line": 115,
+      "line": 191,
       "classification": "approved URL or immutable integrity value"
     },
     {
       "file": "docs/lighthouse-mobile.json",
-      "line": 227,
-      "classification": "approved URL or immutable integrity value"
-    },
-    {
-      "file": "docs/lighthouse-mobile.json",
-      "line": 230,
+      "line": 194,
       "classification": "approved URL or immutable integrity value"
     },
     {

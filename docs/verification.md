@@ -4,6 +4,25 @@
 
 The original application has been replaced by a fresh static CV implementation. The repository, Git history, retained font licences and existing deployment project are preserved.
 
+## Publication
+
+Live: https://stevegrady-site.vercel.app
+
+Repository: https://github.com/ZeroCool0388/stevegrady-site
+
+Merge commit: `e25ddf60dde2327315d2405b94bdbfcb24fd3adf`. GitHub confirms author and committer Steve Grady with the supplied noreply identity, associated with ZeroCool0388. Vercel reports a successful production deployment.
+
+Live Lighthouse, 9 October 2026:
+
+| Profile | Performance | Accessibility | Best practices | SEO |
+| ------- | ----------: | ------------: | -------------: | --: |
+| Mobile  |         100 |           100 |            100 | 100 |
+| Desktop |         100 |           100 |            100 | 100 |
+
+`lighthouse-scores.json` and the two detailed files record the live URL and timestamp. Scores describe this run and may vary with network/device conditions.
+
+All six screenshots and `qa-results.json` were refreshed against the production URL. `link-check.json` confirms all four project thumbnails open the correct destinations, all three separate repository links work, and the spotlight is off on a touch-capable desktop viewport. Public project destinations also returned HTTP 200.
+
 ## Checks
 
 - ESLint, strict TypeScript and Next production static export pass.
@@ -34,7 +53,7 @@ Rendered screenshots were reviewed against the three concepts and the written br
 
 ## Scan output and necessary exceptions
 
-`publication-scan.json` lists every literal substring match by path and line. There are zero prohibited-content matches and zero banned-phrase matches.
+`full-folder-scan.json` records the full-folder scan, including local inputs and generated caches. `publication-scan.json` lists every publishable literal substring match by path and line. There are zero prohibited-content matches and zero banned-phrase matches.
 
 A strictly literal zero-match result is incompatible with the required demo/repository URLs and some unchanged package metadata. The approved project slug contains one specified credential-prefix fragment; two SHA-512 integrity values contain a coincidental three-letter fragment; one standard npm package URL contains the same prefix fragment. None is a credential or prohibited site content. They have been retained because altering required links or package checksums would break the brief or dependency verification.
 
