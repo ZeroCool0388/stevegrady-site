@@ -1,20 +1,14 @@
 {
-  "url": "http://localhost:3000",
-  "fetchTime": "2026-10-09T20:46:26.983Z",
+  "url": "https://stevegrady-site.vercel.app",
+  "fetchTime": "2026-10-09T20:52:22.733Z",
   "lighthouseVersion": "13.5.0",
   "scores": {
-    "performance": 93,
+    "performance": 98,
     "accessibility": 100,
     "best-practices": 100,
     "seo": 100
   },
   "issues": [
-    {
-      "id": "largest-contentful-paint",
-      "title": "Largest Contentful Paint",
-      "score": 0.71,
-      "displayValue": "3.2 s"
-    },
     {
       "id": "label-content-name-mismatch",
       "title": "Elements with visible text labels do not have matching accessible names.",
@@ -73,7 +67,7 @@
       "id": "unused-javascript",
       "title": "Reduce unused JavaScript",
       "score": 0,
-      "displayValue": "Est savings of 29 KiB",
+      "displayValue": "Est savings of 30 KiB",
       "details": {
         "type": "opportunity",
         "headings": [
@@ -105,14 +99,14 @@
         ],
         "items": [
           {
-            "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
-            "totalBytes": 71966,
-            "wastedBytes": 30057,
-            "wastedPercent": 41.76491853116548
+            "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3d7a980ldi4eq.js",
+            "totalBytes": 73540,
+            "wastedBytes": 30505,
+            "wastedPercent": 41.48127863408358
           }
         ],
-        "overallSavingsMs": 300,
-        "overallSavingsBytes": 30057,
+        "overallSavingsMs": 150,
+        "overallSavingsBytes": 30505,
         "sortedBy": [
           "wastedBytes"
         ],
@@ -120,7 +114,7 @@
           "type": "debugdata",
           "metricSavings": {
             "FCP": 0,
-            "LCP": 300
+            "LCP": 150
           }
         }
       }
@@ -177,10 +171,10 @@
                 "width": 362,
                 "height": 226
               },
-              "snippet": "<img alt=\"Renewal Radar live application screenshot\" loading=\"lazy\" width=\"1440\" height=\"900\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" sizes=\"(max-width: 760px) 100vw, 50vw\" srcset=\"/_next/image?url=%2Fwork%2Frenewal-radar.webp&amp;w=384&amp;q=85 384w, /_next/imag…\" src=\"http://localhost:3000/_next/image?url=%2Fwork%2Frenewal-radar.webp&amp;w=750&amp;q…\">",
+              "snippet": "<img alt=\"Renewal Radar live application screenshot\" loading=\"lazy\" width=\"1440\" height=\"900\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" sizes=\"(max-width: 760px) 100vw, 50vw\" srcset=\"/_next/image?url=%2Fwork%2Frenewal-radar.webp&amp;w=384&amp;q=85 384w, /_next/imag…\" src=\"https://stevegrady-site.vercel.app/_next/image?url=%2Fwork%2Frenewal-radar…\">",
               "nodeLabel": "Renewal Radar live application screenshot"
             },
-            "url": "http://localhost:3000/_next/image?url=%2Fwork%2Frenewal-radar.webp&w=750&q=85",
+            "url": "https://stevegrady-site.vercel.app/_next/image?url=%2Fwork%2Frenewal-radar.webp&w=750&q=85",
             "totalBytes": 27378,
             "wastedBytes": 21000,
             "subItems": {
@@ -207,10 +201,10 @@
                 "width": 362,
                 "height": 226
               },
-              "snippet": "<img alt=\"VendorRisk Triage live application screenshot\" loading=\"lazy\" width=\"1440\" height=\"900\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" sizes=\"(max-width: 760px) 100vw, 50vw\" srcset=\"/_next/image?url=%2Fwork%2Fvendor-risk-triage.webp&amp;w=384&amp;q=85 384w, /_next…\" src=\"http://localhost:3000/_next/image?url=%2Fwork%2Fvendor-risk-triage.webp&amp;w=…\">",
+              "snippet": "<img alt=\"VendorRisk Triage live application screenshot\" loading=\"lazy\" width=\"1440\" height=\"900\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" sizes=\"(max-width: 760px) 100vw, 50vw\" srcset=\"/_next/image?url=%2Fwork%2Fvendor-risk-triage.webp&amp;w=384&amp;q=85 384w, /_next…\" src=\"https://stevegrady-site.vercel.app/_next/image?url=%2Fwork%2Fvendor-risk-t…\">",
               "nodeLabel": "VendorRisk Triage live application screenshot"
             },
-            "url": "http://localhost:3000/_next/image?url=%2Fwork%2Fvendor-risk-triage.webp&w=750&q=85",
+            "url": "https://stevegrady-site.vercel.app/_next/image?url=%2Fwork%2Fvendor-risk-triage.webp&w=750&q=85",
             "totalBytes": 24642,
             "wastedBytes": 18876,
             "subItems": {
@@ -237,10 +231,10 @@
                 "width": 362,
                 "height": 226
               },
-              "snippet": "<img alt=\"ScopeForge live application screenshot\" loading=\"lazy\" width=\"1440\" height=\"900\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" sizes=\"(max-width: 760px) 100vw, 50vw\" srcset=\"/_next/image?url=%2Fwork%2Fscopeforge.webp&amp;w=384&amp;q=85 384w, /_next/image?u…\" src=\"http://localhost:3000/_next/image?url=%2Fwork%2Fscopeforge.webp&amp;w=750&amp;q=85\">",
+              "snippet": "<img alt=\"ScopeForge live application screenshot\" loading=\"lazy\" width=\"1440\" height=\"900\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" sizes=\"(max-width: 760px) 100vw, 50vw\" srcset=\"/_next/image?url=%2Fwork%2Fscopeforge.webp&amp;w=384&amp;q=85 384w, /_next/image?u…\" src=\"https://stevegrady-site.vercel.app/_next/image?url=%2Fwork%2Fscopeforge.we…\">",
               "nodeLabel": "ScopeForge live application screenshot"
             },
-            "url": "http://localhost:3000/_next/image?url=%2Fwork%2Fscopeforge.webp&w=750&q=85",
+            "url": "https://stevegrady-site.vercel.app/_next/image?url=%2Fwork%2Fscopeforge.webp&w=750&q=85",
             "totalBytes": 19918,
             "wastedBytes": 15257,
             "subItems": {
@@ -263,7 +257,7 @@
     {
       "id": "legacy-javascript-insight",
       "title": "Legacy JavaScript",
-      "score": 0,
+      "score": 0.5,
       "displayValue": "Est savings of 14 KiB",
       "details": {
         "type": "table",
@@ -293,8 +287,8 @@
         ],
         "items": [
           {
-            "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
-            "wastedBytes": 13920,
+            "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3d7a980ldi4eq.js",
+            "wastedBytes": 14151,
             "subItems": {
               "type": "subitems",
               "items": [
@@ -302,70 +296,70 @@
                   "signal": "Array.prototype.at",
                   "location": {
                     "type": "source-location",
-                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3d7a980ldi4eq.js",
                     "urlProvider": "network",
                     "line": 0,
-                    "column": 229205
+                    "column": 229666
                   }
                 },
                 {
                   "signal": "Array.prototype.flat",
                   "location": {
                     "type": "source-location",
-                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3d7a980ldi4eq.js",
                     "urlProvider": "network",
                     "line": 0,
-                    "column": 228593
+                    "column": 229054
                   }
                 },
                 {
                   "signal": "Array.prototype.flatMap",
                   "location": {
                     "type": "source-location",
-                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3d7a980ldi4eq.js",
                     "urlProvider": "network",
                     "line": 0,
-                    "column": 228706
+                    "column": 229167
                   }
                 },
                 {
                   "signal": "Object.fromEntries",
                   "location": {
                     "type": "source-location",
-                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3d7a980ldi4eq.js",
                     "urlProvider": "network",
                     "line": 0,
-                    "column": 229082
+                    "column": 229543
                   }
                 },
                 {
                   "signal": "Object.hasOwn",
                   "location": {
                     "type": "source-location",
-                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3d7a980ldi4eq.js",
                     "urlProvider": "network",
                     "line": 0,
-                    "column": 229340
+                    "column": 229801
                   }
                 },
                 {
                   "signal": "String.prototype.trimEnd",
                   "location": {
                     "type": "source-location",
-                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3d7a980ldi4eq.js",
                     "urlProvider": "network",
                     "line": 0,
-                    "column": 228335
+                    "column": 228796
                   }
                 },
                 {
                   "signal": "String.prototype.trimStart",
                   "location": {
                     "type": "source-location",
-                    "url": "http://localhost:3000/_next/static/chunks/3brb4hyv6qt5e.js",
+                    "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3d7a980ldi4eq.js",
                     "urlProvider": "network",
                     "line": 0,
-                    "column": 228250
+                    "column": 228711
                   }
                 }
               ]
@@ -374,7 +368,7 @@
         ],
         "debugData": {
           "type": "debugdata",
-          "wastedBytes": 13920
+          "wastedBytes": 14151
         }
       }
     },
@@ -390,16 +384,16 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "515B70852A10FC4A548F82B2A97B1872": {
-                  "url": "http://localhost:3000/",
-                  "navStartToEndTime": 16,
-                  "transferSize": 7260,
+                "8EE656EF2E25089799C35B56A99F9A26": {
+                  "url": "https://stevegrady-site.vercel.app/",
+                  "navStartToEndTime": 132,
+                  "transferSize": 7547,
                   "isLongest": true,
                   "children": {
-                    "72090.7": {
-                      "url": "http://localhost:3000/_next/static/chunks/16erumox07_1g.css",
-                      "navStartToEndTime": 26,
-                      "transferSize": 5078,
+                    "73007.7": {
+                      "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3x45p8a6k3lh2.css",
+                      "navStartToEndTime": 196,
+                      "transferSize": 5176,
                       "isLongest": true,
                       "children": {}
                     }
@@ -407,7 +401,7 @@
                 }
               },
               "longestChain": {
-                "duration": 26
+                "duration": 196
               }
             }
           },
@@ -435,8 +429,7 @@
     {
       "id": "render-blocking-insight",
       "title": "Render-blocking requests",
-      "score": 0,
-      "displayValue": "Est savings of 140 ms",
+      "score": 0.5,
       "details": {
         "type": "table",
         "headings": [
@@ -458,9 +451,8 @@
         ],
         "items": [
           {
-            "url": "http://localhost:3000/_next/static/chunks/16erumox07_1g.css",
-            "totalBytes": 5078,
-            "wastedMs": 156
+            "url": "https://stevegrady-site.vercel.app/_next/static/immutable/chunks/3x45p8a6k3lh2.css",
+            "totalBytes": 5176
           }
         ]
       }

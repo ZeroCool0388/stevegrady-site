@@ -1,8 +1,8 @@
 {
-  "url": "http://localhost:3000",
+  "url": "https://stevegrady-site.vercel.app",
   "scores": {
     "mobile": {
-      "performance": 93,
+      "performance": 98,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100

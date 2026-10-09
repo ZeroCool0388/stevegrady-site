@@ -22,6 +22,13 @@ for (const width of [1440, 390, 360]) {
     "I design AI-native solutions that get bought and used.",
   );
   assert.equal(await page.locator("article.project").count(), 4);
+  if (width < 760)
+    assert.equal(
+      await page
+        .locator(".spotlight")
+        .evaluate((el) => getComputedStyle(el).display),
+      "none",
+    );
   assert.equal(
     await page
       .locator("body")
@@ -56,11 +63,9 @@ for (const width of [1440, 390, 360]) {
     await page.screenshot({
       path: `docs/screenshots/${width === 1440 ? "desktop" : "mobile"}-work.png`,
     });
-    await page
-      .locator("#work")
-      .screenshot({
-        path: `docs/screenshots/${width === 1440 ? "desktop" : "mobile"}-work-full.png`,
-      });
+    await page.locator("#work").screenshot({
+      path: `docs/screenshots/${width === 1440 ? "desktop" : "mobile"}-work-full.png`,
+    });
   }
   const axe = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
@@ -75,7 +80,7 @@ for (const width of [1440, 390, 360]) {
       })),
     ),
   );
-  if (width === 1440) {
+  if (width === 1440 && process.env.QA_DETAIL_SCREENSHOTS === "1") {
     for (const section of ["about", "approach", "contact"]) {
       await page.locator(`#${section}`).scrollIntoViewIfNeeded();
       await page
@@ -104,6 +109,41 @@ for (const width of [1440, 390, 360]) {
   );
   await page.keyboard.press("Enter");
   assert.equal(await page.evaluate(() => document.activeElement.id), "main");
+  if (width === 1440) {
+    const expected = await page
+      .locator("a[href]")
+      .evaluateAll((links) => links.map((a) => a.getAttribute("href")));
+    const keyboardPage = await context.newPage();
+    await keyboardPage.emulateMedia({ reducedMotion: "reduce" });
+    await keyboardPage.goto(url, { waitUntil: "networkidle" });
+    const actual = [];
+    for (let i = 0; i < expected.length; i++) {
+      await keyboardPage.keyboard.press("Tab");
+      const focused = await keyboardPage.evaluate(() => ({
+        href: document.activeElement.getAttribute("href"),
+        outline: getComputedStyle(document.activeElement).outlineStyle,
+      }));
+      actual.push(focused.href);
+      assert.notEqual(focused.outline, "none");
+    }
+    assert.deepEqual(actual, expected);
+    await keyboardPage.close();
+    for (const [label, id] of [
+      ["About", "about"],
+      ["Work", "work"],
+      ["Approach", "approach"],
+      ["Contact", "contact"],
+    ]) {
+      await page
+        .getByRole("navigation", { name: "Main navigation" })
+        .getByRole("link", { name: label, exact: true })
+        .click();
+      assert.ok(
+        Math.abs((await page.locator(`#${id}`).boundingBox()).y) <
+          (id === "contact" ? 400 : 70),
+      );
+    }
+  }
   const pdf = await page.request.get(`${url}/cv/steve-grady-cv.pdf`);
   assert.equal(pdf.status(), 200);
   assert.ok((await pdf.body()).toString().includes("CV coming soon"));

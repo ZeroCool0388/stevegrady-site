@@ -4,6 +4,8 @@ A personal portfolio for Steve Grady, Senior Technical Solutions Consultant: AI-
 
 Built with Next.js App Router, strict TypeScript, Tailwind CSS, Motion and Lenis. The page is statically rendered; no backend, credentials, database, tracking or cookies are required.
 
+Live: [stevegrady-site.vercel.app](https://stevegrady-site.vercel.app)
+
 ## Run locally
 
 ```sh
