@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
-const config: NextConfig = {
-  poweredByHeader: false,
-  turbopack: { root: process.cwd() },
-  images: { formats: ["image/webp"], qualities: [85] },
+const nextConfig: NextConfig = {
+  output: "export",
+  images: { unoptimized: true },
 };
-export default config;
+export default nextConfig;

@@ -16,24 +16,25 @@ try {
       onlyCategories: ["performance", "accessibility", "best-practices", "seo"],
       logLevel: "error",
     };
-    if (formFactor === "desktop") {
-      options.formFactor = "desktop";
-      options.screenEmulation = {
-        mobile: false,
-        width: 1440,
-        height: 1000,
-        deviceScaleFactor: 1,
-        disabled: false,
-      };
-      options.throttling = {
-        rttMs: 40,
-        throughputKbps: 10240,
-        cpuSlowdownMultiplier: 1,
-        requestLatencyMs: 0,
-        downloadThroughputKbps: 0,
-        uploadThroughputKbps: 0,
-      };
-    }
+    if (formFactor === "desktop")
+      Object.assign(options, {
+        formFactor: "desktop",
+        screenEmulation: {
+          mobile: false,
+          width: 1440,
+          height: 1000,
+          deviceScaleFactor: 1,
+          disabled: false,
+        },
+        throttling: {
+          rttMs: 40,
+          throughputKbps: 10240,
+          cpuSlowdownMultiplier: 1,
+          requestLatencyMs: 0,
+          downloadThroughputKbps: 0,
+          uploadThroughputKbps: 0,
+        },
+      });
     const { lhr } = await lighthouse(url, options);
     scores[formFactor] = Object.fromEntries(
       Object.entries(lhr.categories).map(([k, v]) => [
@@ -73,3 +74,5 @@ try {
 } finally {
   await chrome.kill();
 }
+if (Object.values(scores).some((s) => Object.values(s).some((v) => v < 90)))
+  process.exitCode = 1;
