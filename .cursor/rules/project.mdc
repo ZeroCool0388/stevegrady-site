@@ -1,0 +1,33 @@
+---
+description: Project rules for the stevegrady-site repo
+alwaysApply: true
+---
+
+# Steve Grady
+
+Next.js 16, React 19, and strict TypeScript. Tailwind CSS v4. Static export with no backend. The public site is https://stevegrady-site.vercel.app. Page copy lives in `src/config/site.ts`. Selected work links VendorRisk Triage, Renewal Radar, ScopeForge, and Personal AI System.
+
+## No real private data
+
+No real private data. Do not add personal contact details beyond what the public site already shows: name, location, GitHub, and LinkedIn in `src/config/site.ts`. No email address or phone number. No employer names or work data beyond that public copy.
+
+## No secrets in code
+
+No secrets in code. Do not commit real keys. Never add a `NEXT_PUBLIC_` key. Keep `.env*` gitignored. The site has no backend and no environment values.
+
+## Checks before a commit or pull request
+
+These must pass before any commit or pull request:
+
+- `npm run lint` — `eslint .`
+- `npm run typecheck` — `tsc --noEmit`
+- `npm run build` — Next.js production build (`next build`, static export)
+- `npm run qa` — Playwright and axe checks (`node scripts/qa.mjs`) against `QA_URL`, or `http://localhost:3000`
+
+## Content rules
+
+Project claims and numbers must match what the linked repositories show. Never invent metrics, scores, or counts. Project copy and links live in `src/config/site.ts`. Deal statistics stay off the site.
+
+## No paid services
+
+No paid services. No paid AI calls and no paid APIs. Keep the site a static export on the free tier. Do not add provider keys.
